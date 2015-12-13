@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- fits page to screen -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- shows up in Google search results -->
+		<meta name="description" content="CoderDojoXL presents Khan Academy lesson sessions, going through CSS basics.">
+		<!-- page author -->
+		<meta name="author" content="CoderDojoXL Shanghai">
+		<!-- favicon -->
+		<!-- make your own favicon at http://www.favicon.cc/ -->
+		<link rel="icon" href="img/cdxl_favicon.ico">
+
+		<title>CSS Layout</title>
+
+		<!-- CSS link files -->
+		<!-- Normalize resets browser defaults -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!-- template styles -->
+		<link rel="stylesheet" type="text/css" href="css/css_basics_styles.css">
+		<!-- my styles -->
+		<link rel="stylesheet" type="text/css" href="css/my_styles.css">
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    	<script src="js/ie-emulation-modes-warning.js"></script>
+
+    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!--[if lt IE 9]>
+      	<script src="js/html5shiv.min.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+
+	</head>
+	<body>
+		<div id="header">
+			<header>
+				<nav>
+					<ul class="flexbox-container flexbox-justified">
+						<li class="flexbox-item"><a href="index.html">Home</a></li>
+
+						<li class="flexbox-item"><a href="#grouping_elements">Grouping</a></li>
+						
+						<li class="flexbox-item"><a href="#overflow">Overflow</a></li>
+						
+						<li class="flexbox-item"><a href="#box_model">Box Model</a></li>
+
+						<li class="flexbox-item"><a href="#position">Position</a></li>
+						
+						<li class="flexbox-item"><a href="#google_maps">Google Maps</a></li>
+
+						<li class="flexbox-item"><a href="#Floats">Floats</a></li>
+					</ul>
+				</nav>
+			</header>
+		<div> <!-- header div -->
+
+		<!-- main website content -->
+		<h1 style="text-align: center" id="css_basics">CSS Layouts</h1>
+
+		<div class="main">
+
+			<!-- Grouping Elements -->
+			<section id="grouping_elements" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Grouping Elements</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3> <span class="keyword_css_property">&lt; span &gt;</span></h3>
+					<p>The span tag is an inline element and is easily used to target  <span class="keyword_attribute">text</span.</p>
+
+					<h3> <span class="keyword_css_property">&lt; div &gt;</span></h3>
+					<p>Div's are extremely useful block elements for positioning purposes. Notice this page is itself placed within a container div.</p>
+					<p>Example: </p>
+					<div id="divex"></div>
+					<br>
+				</article>
+			</section>
+
+			<!-- Overflow -->
+			<section id="overflow" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Width, Height, & Overflow</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3> <span class="keyword_css_property"> </span>width: ; height: ; overflow: </h3>
+					<p>Notice as the width and height values are specified to the following divs.</p>
+					<p>Original without and width or height:</p>
+					<div class="overflow_div">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in porttitor ipsum, in vehicula ipsum. Fusce nec hendrerit turpis. In volutpat orci et ante euismod, a ultricies tortor ultrices. Nam dictum lobortis nibh nec ultrices. Morbi ultrices sollicitudin massa ac consectetur. Vivamus varius, lectus sit amet iaculis rhoncus, mi lorem molestie lectus, nec dignissim nibh lorem at libero. Cras sollicitudin lacus nulla, et iaculis velit porttitor ut. Vestibulum laoreet libero ut lectus volutpat vehicula. Sed non consequat velit. Cras et pellentesque turpis. Fusce vel felis non justo dignissim ultricies eget at sem. Vivamus auctor interdum suscipit. Nam tristique est sit amet libero suscipit accumsan. Aenean rutrum augue a feugiat cursus.</p>
+					</div>
+					<p>With specified width value:</p>
+					<code> #div_width {width: 60%;} </code>
+					<div class="overflow_div div_width">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in porttitor ipsum, in vehicula ipsum. Fusce nec hendrerit turpis. In volutpat orci et ante euismod, a ultricies tortor ultrices. Nam dictum lobortis nibh nec ultrices. Morbi ultrices sollicitudin massa ac consectetur. Vivamus varius, lectus sit amet iaculis rhoncus, mi lorem molestie lectus, nec dignissim nibh lorem at libero. Cras sollicitudin lacus nulla, et iaculis velit porttitor ut. Vestibulum laoreet libero ut lectus volutpat vehicula. Sed non consequat velit. Cras et pellentesque turpis. Fusce vel felis non justo dignissim ultricies eget at sem. Vivamus auctor interdum suscipit. Nam tristique est sit amet libero suscipit accumsan. Aenean rutrum augue a feugiat cursus.</p>
+					</div>
+					<p>With specified height and width values:</p>
+					<code> .div_height {height: 100px} </code>
+					<br><br>
+					<div class="overflow_div div_width div_height overflow_hidden">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in porttitor ipsum, in vehicula ipsum. Fusce nec hendrerit turpis. In volutpat orci et ante euismod, a ultricies tortor ultrices. Nam dictum lobortis nibh nec ultrices. Morbi ultrices sollicitudin massa ac consectetur. Vivamus varius, lectus sit amet iaculis rhoncus, mi lorem molestie lectus, nec dignissim nibh lorem at libero. Cras sollicitudin lacus nulla, et iaculis velit porttitor ut. Vestibulum laoreet libero ut lectus volutpat vehicula. Sed non consequat velit. Cras et pellentesque turpis. Fusce vel felis non justo dignissim ultricies eget at sem. Vivamus auctor interdum suscipit. Nam tristique est sit amet libero suscipit accumsan. Aenean rutrum augue a feugiat cursus.</p>
+					</div>
+					<p>Default of overflow is visible. Values include:</p>
+					<ul>
+						<li>visible</li>
+						<li>hidden</li>
+						<li>auto</li>
+					</ul>
+					<p>Now use the overflow property to make the content scrollable.</p>
+					<div class="overflow_div div_width div_height div_scrollable">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in porttitor ipsum, in vehicula ipsum. Fusce nec hendrerit turpis. In volutpat orci et ante euismod, a ultricies tortor ultrices. Nam dictum lobortis nibh nec ultrices. Morbi ultrices sollicitudin massa ac consectetur. Vivamus varius, lectus sit amet iaculis rhoncus, mi lorem molestie lectus, nec dignissim nibh lorem at libero. Cras sollicitudin lacus nulla, et iaculis velit porttitor ut. Vestibulum laoreet libero ut lectus volutpat vehicula. Sed non consequat velit. Cras et pellentesque turpis. Fusce vel felis non justo dignissim ultricies eget at sem. Vivamus auctor interdum suscipit. Nam tristique est sit amet libero suscipit accumsan. Aenean rutrum augue a feugiat cursus.</p>
+					</div>
+
+				</article>
+			</section>
+
+			<!-- Box Model -->
+			<section class="flexbox-container" id="box_model">
+				<aside class="flexbox-item">
+					<h1>The Box Model</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">The Box Model</span></h3>
+					<img src="img/css_box_model.jpg" width="80%">
+					<h3>Elements have 4 parts:</h3>
+					<ol>
+						<li>Actual content</li>
+						<li>Padding</li>
+						<li>Border</li>
+						<li>Margin</li>
+					</ol>
+					<h3>Margin</h3>
+					<p>The transparent area around the box that separates it from other elements.</p>
+					<p>Default Example:</p>
+					<!-- Default -->
+					<code>&lt;div&gt;div&lt;/div&gt;</code>
+					<div class="box_model_div">div</div>
+					<!-- Margins -->
+					<code>.box_model_div {margin: 5px};</code>
+					<div class="box_model_div">div</div>
+					<div class="box_model_div" style="margin: 5px">div</div>
+					<!-- Borders -->
+					<code>.box_model_div {border: 5px solid black};</code>
+					<div class="box_model_div">div</div>
+					<div class="box_model_div" style="margin: 5px">div</div>
+					<div class="box_model_div" style="border: 5px solid black">div</div>
+					<p>Border styles include:</p>
+					<ul>
+						<li style="border: 5px dashed red">dashed</li>
+						<li style="border: 5px dotted red">dotted</li>
+						<li style="border: 5px double red">double</li>
+						<li style="border: 5px groove red">groove</li>
+						<li style="border: hidden">hidden</li>
+						<li style="border: inherit">inherit</li>
+						<li style="border: initial">initial</li>
+						<li style="border: 5px inset red">inset</li>
+						<li style="border: none">none</li>
+						<li style="border: 5px outset red">outset</li>
+						<li style="border: 5px ridge red">ridge</li>
+						<li style="border: 5px solid red">solid</li>
+					</ul>
+
+					<!-- Padding -->
+					<code>.box_model_div {padding: 5px};</code>	
+					<div class="box_model_div">div</div>
+					<div class="box_model_div" style="margin: 5px">div</div>
+					<div class="box_model_div" style="border: 5px solid black">div</div>
+					<div class="box_model_div" style="padding: 5px">div</div>
+					<!-- Complete example -->
+					<p>Examples of with and without these properties:</p>
+					<div class="box_model_div">div</div>
+					<div class="box_model_div" style="margin: 5px; border: 5px solid black; padding: 5px">div</div>
+					<!-- margin and padding values -->
+					<h3>Margin and Padding Values:</h3>
+					<p>You may use px, em, rem, and percentage for values</p>
+					<p>You may also specify either one, two, three, or all four values for each side:</p>
+					<ol>
+						<!-- TRBL -->
+						<li>
+							<p>One value covers all <em>top</em>, <em>right</em>, <em>bottom</em>, and <em>left</em>.</p>
+							<code>.box_model_div {margin: 1em;}</code>
+							<div class="box_model_div" style="margin: 1em">div</div>
+							<code>.box_model_div {padding: 1em;}</code>
+							<div class="box_model_div" style="padding: 1em">div</div>
+						</li>
+						<!-- TB, LR -->
+						<li>
+							<p>The first value is for the <em>top</em> and <em>bottom</em>, and the second is for the <em>right</em> and <em>left</em> sides.</p>
+							<code>.box_model_div {margin: 20px 10px;}</code>
+							<div class="box_model_div" style="margin: 20px 10px">div</div>
+							<code>.box_model_div {padding: 20px 10px;}</code>
+							<div class="box_model_div" style="padding: 20px 10px">div</div>
+						</li>
+						<!-- T, LR, B -->
+						<li>
+							<p>The first value is for the <em>top</em>, the second value is for the <em>right</em> and <em>left</em> sides, and the third is for the <em>bottom</em>.
+							<code>.box_model_div {margin: 20px 10px 1px;}</code>
+							<div class="box_model_div" style="margin: 20px 10px 1px">div</div>
+							<code>.box_model_div {padding: 20px 10px 1px;}</code>
+							<div class="box_model_div" style="padding: 20px 10px 1px">div</div>
+						</li>
+						<!-- T, R, B, L -->
+						<li>
+							<p>Listing all four values, think of a clock starting from the top. The first value is the <em>top</em>, the second is the <em>right</em>, the third is the <em>bottom</em>, and the fourth is the <em>left</em>.
+							<code>.box_model_div {margin: 20px 10px 1px 15px;}</code>
+							<div class="box_model_div" style="margin: 20px 10px 1px 15px">div</div>
+							<code>.box_model_div {padding: 20px 10px 1px 15px;}</code>
+							<div class="box_model_div" style="padding: 20px 10px 1px 15px">div</div>
+
+						</li>
+					</ol>
+					<h3>Specific Sides</h3>
+					<p>We can also specify the side with the following:</p>
+					<h4>Margin:</h4>
+					<ul>
+						<li>margin-top</li>
+						<li>margin-right</li>
+						<li>margin-bottom</li>
+						<li>margin-left</li>
+					</ul>
+					<h4>Padding:</h4>
+					<ul>
+						<li>padding-top</li>
+						<li>padding-right</li>
+						<li>padding-bottom</li>
+						<li>padding-left</li>
+					</ul>
+					<h4>Border:</h4>
+					<ul>
+						<li>border-top</li>
+						<li>border-right</li>
+						<li>border-bottom</li>
+						<li>border-left</li>
+					</ul>
+					<h3>Centering Pages</h3>
+					<p>A nice trick we can do with margins is center things on pages.</p>
+					<p>Example Blank Page</p>
+					<div class="container_div"></div>
+					<p>Example Page not centered</p>
+					<div class="container_div">
+						<div class="page_div">Content not centered</div>
+					</div>
+					<p>Example Page Centered</p>
+					<code> .centered_div {margin: 0 auto;}
+					<div class="container_div">
+						<div class="page_div centered_div">Centered</div>
+					</div>
+				</article>
+			</section>
+
+			<!-- Position -->
+			<section class="flexbox-container" id="position">
+				<aside class="flexbox-item">
+					<h1>Position</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">position: </span></h3>
+					<p>Types of Positioning:</p>
+					<ul>
+						<li>static</li>
+						<ul>
+							<code> .static_div {position: static;}
+							<div class="container_div">
+								<div class="page_div centered_div">
+									<div class="general_div static_div"></div>
+								</div>
+							</div>
+							<li>Normal positioning according to flow in document</li>
+							<li>Cannot set left, top, right, bottom, or z-index values
+						</ul>
+						<li>relative</li>
+						<ul>
+							<code> .relative_div {position: relative; top: 10px; left: 20px;}</code>
+							<div class="container_div">
+								<div class="page_div centered_div">
+									<div class="general_div relative_div"></div>
+								</div>
+							</div>
+							<li>Can set <em>left</em>, <em>top</em>, <em>right</em>, <em>bottom</em>, and <em>z-index</em> values</li>
+							<li>Is the parent container of an <em>position: absolute</em> element</li>
+						</ul>
+						<li>absolute</li>
+						<ul>
+							<code> .absolute_div {position: absolute; top: 10px; margin-top: 10px; left: 20px; margin-left: 20px}</code>
+							<div class="container_div">
+								<div class="page_div centered_div">
+									<div class="general_div relative_div">
+										<div class="tiny_div absolute_div"></div>
+									</div>
+								</div>
+							</div>							
+
+							<li>Simply, the child of a relatively-positioned element, creating a new canvas.</li>
+							<li>Taken out of document flow</li>
+							<li>Positioned at a certain position relative to its closest positioned ancestor or containing block. </li>
+						</ul>
+						<li>fixed</li>
+						<ul>
+							<code> .fixed_div {position: fixed;}</code>
+							<div class="container_div">
+								<div class="page_div centered_div">
+									<div class="general_div relative_div">
+										<div class="tiny_div absolute_div"></div>
+									</div>
+									<div class="maroon_div"></div>
+								</div>
+							</div>
+							<p><strong>Note:</strong>In this example, just look at the positioning in the document compared to the first teal-colored div. Due to this page using the flexbox positioning scheme, the fixed position is not visible.</p>
+							<li>Positioned to the screen's viewport</li>
+							<li>Doesn't move when scrolled</li>
+						</ul>
+						<li>sticky</li>
+						<ul>
+							<li>A hybrid of relative and fixed.</li>
+							<li><strong>Note:</strong>Example does not work here because it is looking for the viewport top values.</li>
+
+							<div class="container_div overflow_auto">
+								<div class="page_div centered_div tall_div">
+									<div class="general_div relative_div">
+										<div class="tiny_div absolute_div"></div>
+									</div>
+									<div class="maroon_div"></div>
+									<div class="long_div sticky_div"></div>
+								</div>
+							</div>
+						</ul>
+					</ul>
+					<h3><span class="keyword_css_property">z-index: </span></h3>
+					<p>Using the <em>z-index</em> property, we can bring elemnts to the front or put them behind other elements.</p>
+					
+					<p>Original Example</p>
+					<div class="container_div">
+						<div class="page_div centered_div">
+							<div class="general_div relative_div">
+								<div class="tiny_div absolute_div"></div>
+								<div class="tiny_div2 absolute_div2"></div>
+							</div>
+						</div>
+					</div>
+					<!-- z-index -->
+					<p>With z-index set to 1</p>
+					<code>.tiny_div2 { z-index: 1; } </code>
+					<div class="container_div"> <!-- viewport -->
+						<div class="page_div centered_div"> <!-- whitespace -->
+							<div class="general_div relative_div">
+								<div class="tiny_div absolute_div z-index"></div>
+								<div class="tiny_div2 absolute_div2"></div>
+							</div>
+						</div>
+					</div>
+					<p>
+
+				</article>
+			</section>
+
+			<!-- floats -->
+			<section class="flexbox-container" id="floats">
+				<aside class="flexbox-item">
+					<h1>Floats</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">float: </span></h3>
+				</article>
+			</section>
+
+		</div> <!-- main -->
+
+		<footer>
+			&copy; 2015 Craig O. Curtis
+		</footer>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>

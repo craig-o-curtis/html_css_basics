@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- fits page to screen -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- shows up in Google search results -->
+		<meta name="description" content="CoderDojoXL presents Khan Academy lesson sessions, going through CSS basics.">
+		<!-- page author -->
+		<meta name="author" content="CoderDojoXL Shanghai">
+		<!-- favicon -->
+		<!-- make your own favicon at http://www.favicon.cc/ -->
+		<link rel="icon" href="img/cdxl_favicon.ico">
+
+		<title>CSS Selectors</title>
+
+		<!-- CSS link files -->
+		<!-- Normalize resets browser defaults -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!-- template styles -->
+		<link rel="stylesheet" type="text/css" href="css/css_basics_styles.css">
+		<!-- my styles -->
+		<link rel="stylesheet" type="text/css" href="css/my_styles.css">
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    	<script src="js/ie-emulation-modes-warning.js"></script>
+
+    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!--[if lt IE 9]>
+      	<script src="js/html5shiv.min.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+
+	</head>
+	<body>
+		<div id="header">
+			<header>
+				<nav>
+					<ul class="flexbox-container flexbox-justified">
+						<li class="flexbox-item"><a href="index.html">Home</a></li>
+
+						<li class="flexbox-item"><a href="#multiple_classes">Multiple Classes</a></li>
+						
+						<li class="flexbox-item"><a href="#combos">Combos</a></li>
+
+						<li class="flexbox-item"><a href="#descendents">Descendents</a></li>
+
+						<li class="flexbox-item"><a href="#pseudo-classes">Pseudo-classes</a></li>
+
+						<li class="flexbox-item"><a href="#specificity">Specificity</a></li>
+					</ul>
+				</nav>
+			</header>
+		<div> <!-- header div -->
+
+		<!-- main website content -->
+		<h1 style="text-align: center" id="multiple_selectors">CSS Selectors</h1>
+
+		<div class="main">
+
+			<!-- Multiple Classes -->
+			<section id="multiple_classes" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Multiple Classes</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3> <span class="keyword_css_property">class="class class class"</h3>
+					<p>If you have multiple elements that require specific customization, it is easiest to just add another class to that specific element.</p>
+					<p>Example:</p>
+					<div class="div_base"></div>
+					<div class="div_base div_rectangle"></div>
+					<div class="div_base div_circle"></div>
+					<div class="div_base div_arc"></div>
+					<div class="div_base div_triangle"></div>
+					<div class="div_base div_animate"></div>
+					<p>Inspect Element to see CSS class details.</p>
+				</article>
+			</section>
+
+			<!-- Combining class with element selectors -->
+			<section id="combos" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Combining CSS Class and Element Selectors</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">element.class</span></h3>
+					<p>We can get specific if we want to target only certain elements even though many elements may have the same class.</p>
+					
+					<p>Notice both Heading 3 and the second have the same "class_warning" class.</p>
+					<p>To target only the paragraph, we can do the following:</p>
+					<code>p.class_warning {color:yellow}</code>
+					<div class="container_div"> <!-- viewport -->
+						<div class="page_div centered_div overflow_auto"> <!-- whitespace -->
+							<h3 class="class_warning">Heading</h3>
+							<p>Paragraph</p>
+							<p class="class_warning">Paragraph</p>
+							<p>Paragraph</p>
+						</div>
+					</div>
+				</article>
+			</section>
+
+			<!-- CSS Descendent Selectors -->
+			<section class="flexbox-container" id="descendents">
+				<aside class="flexbox-item">
+					<h1>Descendent Selectors</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">element element .class</span></h3>
+					<p>Use a space between selectors to specify a child element.</p>
+					<p>In the example below, I want to keep the background styles, but I want to manipulate the styled in side the paragraph</p>
+					<p>Example:</p>
+					<code>p .slateblue, p .royalblue, p .cornflowerblue, p .steelblue { color: snow; }</code>
+					<div class="container_div"> <!-- viewport -->
+						<div class="page_div centered_div overflow_auto"> <!-- whitespace -->
+							<ul>
+								<li class="slateblue">slateblue</li>
+
+								<li class="royalblue">royalblue</li>
+
+								<li class="cornflowerblue">cornflowerblue</li>
+
+								<li class="skyblue">skyblue</li>
+
+								<li class="powderblue">powderblue</li>
+
+								<li class="steelblue">steelblue</li>
+							</ul>
+							<p>Lorem ipsum <span class="slateblue">dolor</span> sit <span class="royalblue">amet</span>, <span class="cornflowerblue">consectetur</span> adipiscing elit. Donec aliquet <span class="skyblue">tellus</span> non ipsum porta tempus. Nulla <span class="powderblue">venenatis</span> nisl ex, nec <span class="steelblue">condimentum</span> nisi venenatis eget. Nulla facilisi.</p>
+						</div>
+					</div>
+					<p>THere is no limit to the number of descendent selectors you can use, but don't go overboard. Keep you code clean.</p>
+				</article>
+			</section>
+
+			<!-- Pseudo-classes -->
+			<section class="flexbox-container" id="pseudo-classes">
+				<aside class="flexbox-item">
+					<h1>Pseudo-classes</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">:hover, :visited, :link, :active, :focus</span></h3>
+					<p>Pseudo-classes</p>
+					<ul>
+						<li>:link - used for default link styling</li>
+						<li>:hover - changes styles when mouse hovers over element</li>
+						<li>:visited - changes styles after a link has been visited</li>
+						<li>:active - changes styles when clicked</li>
+						<li>:focus - changes styles when selected (with the Tab key) ** only works with a tags and button tags.</li>
+					</ul>
+					<a href="#" class="pseudo">Anchor Button</a>
+					<div class="pseudo">Div Button</div>
+					<button class="pseudo">Button Button</button>
+					<p>Notice how the a tag will keep the :visited styling after it is clicked on once, while the Div Button does not.</p>
+				</article>
+			</section>
+
+			<!-- Specificity -->
+			<section class="flexbox-container" id="specificity">
+				<aside class="flexbox-item">
+					<h1>Specificity</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">User Agent > External CSS > Inline CSS</span></h3>
+					<p>Importance is decided depending on the location of the CSS rule. Inline styles are the most powerful, yet the least commonly used.</p>
+					<p>It is best practice to keep your styles in an external stylesheet linked in the head of your HTML document.</p>
+					<h3><span class="keyword_css_property">element vs. element.class element</span></h3>
+					<p>The more targeted the CSS rule, the more weight it has.</p>
+					<p>Example:</p>
+					<code>#specific_id { color: blue; }<br>.specificity_class { color: red; }</code>
+					<div class="container_div"> <!-- viewport -->
+						<div class="page_div centered_div overflow_auto"> <!-- whitespace -->
+							<p class="specificity_class" id="specific_id">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nec nisi a posuere. Aenean vehicula lorem non dignissim laoreet. Sed id feugiat turpis.</p>
+						</div>
+					</div>
+					<p>Notice in the above example how id overrides class.</p>
+					<p>Precedence is also decided based on the specificity of the selectors.</p>
+					<p>Example:<p>
+					<code>div div p.element_specificity { color: purple; }<br>div p.element_specificity { color: orange; }<br>p.element_specificity { color: teal; }<br>.element_specificity { color: yellow; }</code>
+					<div class="container_div"> <!-- viewport -->
+						<div class="page_div centered_div overflow_auto"> <!-- whitespace -->
+							<p class="element_specificity">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nec nisi a posuere. Aenean vehicula lorem non dignissim laoreet. Sed id feugiat turpis.</p>
+						</div>
+					</div>
+					<p>Notice how the most specific style is selected, thus the p text color is purple.</p> 
+				</article>
+			</section>
+
+		</div> <!-- main -->
+
+		<footer>
+			&copy; 2015 Craig O. Curtis
+		</footer>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>

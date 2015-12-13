@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- fits page to screen -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- shows up in Google search results -->
+		<meta name="description" content="CoderDojoXL presents Khan Academy lesson sessions, going through CSS basics.">
+		<!-- page author -->
+		<meta name="author" content="CoderDojoXL Shanghai">
+		<!-- favicon -->
+		<!-- make your own favicon at http://www.favicon.cc/ -->
+		<link rel="icon" href="img/cdxl_favicon.ico">
+
+		<title>CSS Basics</title>
+
+		<!-- CSS link files -->
+		<!-- Normalize resets browser defaults -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!-- template styles -->
+		<link rel="stylesheet" type="text/css" href="css/css_basics_styles.css">
+		<!-- my styles -->
+		<link rel="stylesheet" type="text/css" href="css/my_styles.css">
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    	<script src="js/ie-emulation-modes-warning.js"></script>
+
+    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!--[if lt IE 9]>
+      	<script src="js/html5shiv.min.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+
+	</head>
+	<body>
+		<div id="header">
+			<header>
+				<nav>
+					<ul class="flexbox-container flexbox-justified">
+						<li class="flexbox-item"><a href="index.html">Home</a></li>
+
+
+						<li class="flexbox-item"><a href="#css_basics">CSS Basics</a></li>
+						<li class="flexbox-item"><a href="#selecting_by_id">CSS Selecting by id</a></li>
+						<li class="flexbox-item"><a href="#selecting_by_class">CSS Selecting by class</a></li>
+					</ul>
+				</nav>
+			</header>
+		<div> <!-- header div -->
+
+		<!-- main website content -->
+		<h1 style="text-align: center" id="css_basics">CSS Basics</h1>
+
+		<div class="main">
+			<!-- CSS Selectors -->
+			<section id="css_selectors" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>CSS Selectors</h1>
+				</aside>
+				<article class="flexbox-item">
+					<code> selector { property: value; } <br>
+					<code>h1 {
+						color: red;
+					}</code>
+					<p>Generally just use an HTML tag name as the selector to create a new HTML rule.</p>
+					Then specify the property and value. A complete list of properties and values can be found at <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">Mozilla Developer's Network</a>.
+				</article>
+			</section>
+
+			<!-- Colors -->
+			<section id="css_colors" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Colors</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>We can change the color of text using 
+						<span class="color1">color keywords</span>, 
+						<span class="color2">HEXCODE</span>, 
+						<span class="color3">RGB</span> or 
+						<span class="color4">RGBA</span>, and 
+						<span class="color5">HSL</span> or 
+						<span class="color6">HSLA</span>.</p>
+				</article>
+			</section>
+
+			<!-- Background color -->
+			<section class="flexbox-container" id="colored_background">
+				<aside class="flexbox-item">
+					<h1>Backgrounds</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>You can use the background-color or background properties in CSS.</p>
+				</article>
+			</section>
+			
+			<!-- Selecting by id-->
+			<section class="flexbox-container" id="selecting_by_id">
+				<aside class="flexbox-item">
+					<h1>Selecting by #id</h1>
+				</aside>
+				<article class="flexbox-item">
+				<p>Notice you can target certain elements. Inspect Element of the paragraphs below:</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+					<p>paragraph</p>
+				</article>
+			</section>
+
+			<!-- Selecting by class-->
+			<section class-"flexbox-container flexbox-justified" id="selecting_by_class">
+				<aside class="flexbox-item">
+					<h1 id="selecting_by_class">Selecting by .Class</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>Selecting by class is one of the most powerful tools in the CSS toolbox.</p>
+					<p>We will start with a simple box:</p>
+					<div class="box box_teal"></div>
+					<div class="box box_purple box_first"></div>
+					<div class="box box_teal box_second"></div>
+					<div class="box box_purple box_third"></div>
+				</article>
+			</section>
+			
+		</div> <!-- main -->
+
+		<footer>
+			&copy; 2015 Craig O. Curtis
+		</footer>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>

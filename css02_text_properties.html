@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- fits page to screen -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- shows up in Google search results -->
+		<meta name="description" content="CoderDojoXL presents Khan Academy lesson sessions, going through CSS basics.">
+		<!-- page author -->
+		<meta name="author" content="CoderDojoXL Shanghai">
+		<!-- favicon -->
+		<!-- make your own favicon at http://www.favicon.cc/ -->
+		<link rel="icon" href="img/cdxl_favicon.ico">
+
+		<title>CSS Text Properties</title>
+
+		<!-- CSS link files -->
+		<!-- Normalize resets browser defaults -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!-- template styles -->
+		<link rel="stylesheet" type="text/css" href="css/css_basics_styles.css">
+		<!-- my styles -->
+		<link rel="stylesheet" type="text/css" href="css/my_styles.css">
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    	<script src="js/ie-emulation-modes-warning.js"></script>
+
+    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!--[if lt IE 9]>
+      	<script src="js/html5shiv.min.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+
+	</head>
+	<body>
+		<div id="header">
+			<header>
+				<nav>
+					<ul class="flexbox-container flexbox-justified">
+						<li class="flexbox-item"><a href="index.html">Home</a></li>
+
+						<li class="flexbox-item"><a href="#css_basics">font-family</a></li>
+						<li class="flexbox-item"><a href="#font_size">font-size</a></li>
+						<li class="flexbox-item"><a href="#font_styles">font styles</a></li>
+						<li class="flexbox-item"><a href="#font_shorthand">font shorthand</a></li>
+						<li class="flexbox-item"><a href="#more_properties">More CSS properties</a></li>
+						<li class="flexbox-item"><a href="#inheritance">inheritance</a></li>
+					</ul>
+				</nav>
+			</header>
+		<div> <!-- header div -->
+
+		<!-- main website content -->
+		<h1 style="text-align: center" id="css_basics">CSS Font Basics</h1>
+
+		<div class="main">
+			<!-- CSS Font Families -->
+			<section id="font-family" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Font families</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3> <span class="keyword_css_property">font-family: </span>
+					<h2 class="font_serif">Serif</h2>
+					<p class="font_serif"> This font family has decorations on the tails of letters, making it more difficult to read.</p>
+					<h2 class="font_sans-serif">Sans-serif</h2>
+					<p class="font_sans-serif">This font is generally preferred for most pages. It is easiest to read.</p>
+					<p class="font_sans-serif">Default on most computers is <strong>Arial</strong> or <strong>Helvetica</strong>.</p>
+					<h2 class="font_monospace">Monospace</h2>
+					<p class="font_monospace">Monospace is used to replicate typewriter documents and also used for code examples.</p>
+					<h2 class="font_cursive">Cursive</h2>
+					<p class="font_cursive">Cursive is the most decorative, yet most difficult to read.</p>
+					<p>See a full list of PC and Compatable fonts <a href="http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html" target="_blank">here</a>
+					<h2 class="font_fantasy">Fantasy</h2>
+					<p class="font_fantasy">Straight out of LOTR.</p>
+					<h3>Specifying Font Names</h3>
+					<p>You can also directly code in the font name you want displayed to override user's defaults.</p>
+					<code> p { font-family: Helvetica, Arial, sans-serif;} </code>
+					<p>Output:</p>
+					<p id="helvetica">This will show Helvetica if you have it. If not, it will be in Arial or another general sans-serif font.</p>
+				</article>
+			</section>
+
+			<!-- Font Size -->
+			<section id="font_size" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Font Size</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3> <span class="keyword_css_property">font-size: </span>
+					<h3>Units</h3>
+					<p>Specify font sizes in the following units:</p>
+					<ul>
+						<li>px</li>
+						<li>%</li>
+						<li>em</li>
+						<li>rem</li>
+						<li>%</li>
+					</ul>
+				</article>
+			</section>
+
+			<!-- Font Styles -->
+			<section class="flexbox-container" id="font_styles">
+				<aside class="flexbox-item">
+					<h1>Font Styles</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3> <span class="keyword_css_property">font-weight: </span></h3>
+					<p>Possible values:</p>
+					<ul>
+						<li style="font-weight: 100">100</li>
+						<li style="font-weight: 200">200</li>
+						<li style="font-weight: 300">300</li>
+						<li style="font-weight: 400">400</li>
+						<li style="font-weight: 500">500</li>
+						<li style="font-weight: 600">600</li>
+						<li style="font-weight: 700">700</li>
+						<li style="font-weight: 800">800</li>
+						<li style="font-weight: 900">900</li>
+						<li style="font-weight: initial">initial</li>
+						<li style="font-weight: inherit">inherit</li>
+						<li style="font-weight: normal">normal</li>
+						<li style="font-weight: bold">bold</li>
+						<li style="font-weight: bolder">bolder</li>
+						<li style="font-weight: lighter">lighter</li>
+					</ul>
+					<h3> <span class="keyword_css_property">font-style: </span></h3>
+					<p style="font-style: initial">initial</p>
+					<p style="font-style: inherit">inherit</p>
+					<p style="font-style: normal">normal</p>
+					<p style="font-style: italic">italic</p>
+					<p style="font-style: oblique">oblique</p>
+				</article>
+			</section>
+			
+			<!-- Font Shorthand -->
+			<section class="flexbox-container" id="font_shorthand">
+				<aside class="flexbox-item">
+					<h1>Font Shorthand</h1>
+				</aside>
+				<article class="flexbox-item">
+					<h3><span class="keyword_css_property">font: </span></h3>
+					<p>The order goes style, size, and family.</p>
+					<code>p { font: italic 13px Fantasy} </code>
+					<p>Output:</p>
+					<p style="font: italic 13px Fantasy">This is a fantastic Fantasy sentence.</p>
+				</article>
+			</section>
+			
+			<!-- More CSS Properties -->
+			<section class="flexbox-container" id="more_properties">
+				<aside class="flexbox-item">
+					<h1>More CSS Properties</h1>
+				</aside>
+				<article class="flexbox-item">
+					<!-- Line height -->
+					<h3><span class="keyword_css_property">line-height: </span></h3>
+					<p>Units</p>
+					<ul>
+						<li>px</li>
+						<li>em</li>
+						<li>rem</li>
+					</ul>
+					<code>p:first {line-height: 12px}</code>
+					<p>Output:</p>
+					<p style="line-height: 12px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor nisi, iaculis elementum lectus a, finibus tempor elit. Aliquam a egestas sem. Donec eget nisl euismod, sodales urna eu, tempor erat. Proin tincidunt suscipit ultrices. Vestibulum a ipsum ut nisi congue volutpat vitae dictum est. Integer sodales sapien at eros tristique, et hendrerit mi dignissim. Cras porta placerat sem, a facilisis mauris lacinia quis.</p>
+					
+					<code>p:nth-child(2) {line-height: 1.5em}</code>
+					<p>Output:</p>
+					<p style="line-height: 1.5em">Nam augue lectus, placerat ut diam a, iaculis vestibulum quam. Nam scelerisque elit magna, sit amet semper libero egestas ac. Fusce ultricies turpis augue, ut tristique diam varius sit amet. Maecenas vitae odio eget leo tincidunt pellentesque eu vel nisi. In varius cursus est lacinia ornare. Cras iaculis tempus turpis, at auctor felis aliquam sed. Nunc commodo vel eros nec vulputate. Integer nec metus eget sapien pretium faucibus sit amet et nisl. Curabitur fringilla ultrices est, bibendum pretium mi convallis sit amet.</p>
+
+					<!-- text align -->
+					<h3><span class="keyword_css_property">text-align: </span></h3>
+
+					<code>p:first {text-align: left} </code>
+					<p style="text-align: left">I am aligned to the left.</p>
+
+					<code>p:nth-child(3) {text-align: justify} </code>
+					<p style="text-align: justify">I am justified across the parent element. If there is a lot of text, it ill be evenly spaced across the element space and will not have jagged edges. Think of newspaper columns where all to words seem to end up right on the edge of the columns.</p>
+
+					<code>p:nth-child(2) {text-align: center} </code>
+					<p style="text-align: center">I am aligned in the center.</p>
+
+					<code>p:first {text-align: last} </code>
+					<p style="text-align: right">I am aligned to the right.</p>
+
+					<!-- Text decoration -->
+					<h3><span class="keyword_css_property">text-decoration: </span></h3>
+					<p>This is commonly used to remove underlines from &lt; a &gt; tags.</p>
+					<code>a {text-decoration: none}</code><br>
+
+					<a href="#">I am underlined</a><br>
+					<a href="#" style="text-decoration: none">I am not underlined</a><br>
+					<br>
+				</article>
+			</section>
+
+			<!-- Inheritance -->
+			<section class="flexbox-container" id="inheritance">
+				<aside class="flexbox-item">
+					<h1>CSS Inheritance</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>Order and Specificity order most important determining which CSS styles show.</p>
+
+					<h3>Orders of Precedence:</h3>
+					<ol>
+						<li>Inline CSS</li>
+						<li>User Agent</li>
+						<li>CSS files</li>
+					</ol>
+				</article>
+			</section>
+
+		</div> <!-- main -->
+
+		<footer>
+			&copy; 2015 Craig O. Curtis
+		</footer>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>

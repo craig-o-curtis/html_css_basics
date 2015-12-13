@@ -1,0 +1,172 @@
+<!DOCTYPE html> <!-- specifies modern HTML5 0-->
+<html>
+    <head> <!-- user doesn't see; it is for metadata and scripts -->
+        <meta charset="utf-8"> <!-- for most languages -->
+        <title>HTML+CSS Crash Course</title> <!-- shows in tab -->
+    </head>
+    <body> <!-- webpage content goes inside here -->
+    	<header>
+    		<nav id="top_menu">
+    			<ul>
+    				<li class="flexbox-item"><a href="index.html">Home</a></li>
+
+    				<li><a href="#html_basics">HTML Basics</a></li>
+					<li><a href="#html_text_emphasis">HTML Text Emphasis</a></li>
+					<li><a href="#html_lists">HTML Lists</a></li>
+					<li><a href="#html_images">HTML Images</a></li>
+    			</ul>
+    		</nav>
+    	</header>
+    	<main>
+	    	<h1>HTML+CSS Crash Course</h1>
+	    	<section id="html_basics">
+		    	<h2>HTML Basics</h2>
+
+		    	<!-- Headings -->
+		    	<h3>Headings &lt; h1 &gt; ... &lt; &frasl; h1 &gt; , &lt; h2 &gt; ... &lt; &frasl; h2 &gt; &lt; h3 &gt; ... &lt; &frasl; h3 &gt; &lt; h4 &gt; ... &lt; &frasl; h4 &gt; &lt; h5 &gt; ... &lt; &frasl; h5 &gt; &lt; h6 &gt; ... &lt; &frasl; h6 &gt; </h3>
+		    	<h1>Heading 1</h1> <!-- there are 6 headline tags -->
+		    	<h2>Heading 2</h2>
+		    	<h3>Heading 3</h3>
+		    	<h4>Heading 4</h4>
+		    	<h5>Heading 5</h5>
+		    	<h6>Heading 6</h6>
+
+		    	<!-- The <p> tag -->
+		    	<h3>The Paragraph Tag &lt; p &gt;</h3>
+		    	<p>Use the &lt; p &gt; tags for paragraphs.</p>
+		    	<p>This is a paragraph</p> <!-- paragraph tag -->
+		    	<p>We can get dummy text from <a href="http://www.lipsum.com/">Lorem Ipsum</a></p> <!-- notice the anchor tag-->
+
+		    	<!-- Lorum Ipsum for sample text -->
+		    	<h3>Lorem Ipsum Example</h3>
+		    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in porttitor ipsum, in vehicula ipsum. Fusce nec hendrerit turpis. In volutpat orci et ante euismod, a ultricies tortor ultrices. Nam dictum lobortis nibh nec ultrices. Morbi ultrices sollicitudin massa ac consectetur. Vivamus varius, lectus sit amet iaculis rhoncus, mi lorem molestie lectus, nec dignissim nibh lorem at libero. Cras sollicitudin lacus nulla, et iaculis velit porttitor ut. Vestibulum laoreet libero ut lectus volutpat vehicula. Sed non consequat velit. Cras et pellentesque turpis. Fusce vel felis non justo dignissim ultricies eget at sem. Vivamus auctor interdum suscipit. Nam tristique est sit amet libero suscipit accumsan. Aenean rutrum augue a feugiat cursus.</p>
+		    	<p>Praesent sit amet fermentum mi, quis molestie quam. Donec a dui at tortor dictum suscipit et in lectus. Duis id posuere dolor. Proin sit amet purus pellentesque est pellentesque blandit in eget ipsum. Vestibulum ultricies ligula non odio mattis, id pulvinar sem rutrum. Fusce volutpat iaculis massa vel tristique. Aenean varius malesuada erat accumsan euismod. Nullam non ex id velit mollis efficitur eu et tortor. Morbi volutpat luctus ultricies. Proin ut faucibus lectus.</p>
+		    	<p>Suspendisse pellentesque, turpis et interdum luctus, metus risus vestibulum ex, quis semper orci neque eu nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque porta, dolor sit amet dignissim porta, ligula ex imperdiet turpis, et ullamcorper augue est eu turpis. Duis tempor tincidunt imperdiet. Suspendisse dictum nisi augue, id sollicitudin ligula interdum vel. Suspendisse potenti. Pellentesque semper, est in aliquet cursus, lorem libero cursus nisi, vitae viverra odio tortor vel quam. Nulla dignissim eu mi a auctor.</p>
+
+		    	<!-- The <br/> tag -->
+		    	<h3>The &lt; br &gt; tag</h3> <!-- notice the special escape characters -->
+		    	<code>Use the &lt; br &gt; tag to break to the next line.<code>
+		    	<p>Fusce sodales tellus vitae nisl lobortis convallis.<br/>Curabitur malesuada ante sed condimentum fringilla.<br/>Aliquam erat volutpat. Etiam nec lobortis justo, nec rutrum lacus.<br/>In neque nibh, congue a faucibus a, tempor et libero.<br/>In hac habitasse platea dictumst.<br/> Aliquam imperdiet suscipit massa, non cursus augue auctor at.<br/>Nunc et arcu sit amet velit efficitur consequat.<br/>Donec fermentum varius magna, non volutpat lectus eleifend at.<br/>Donec tincidunt vestibulum ultrices.<br/>Pellentesque sodales purus sit amet mauris elementum rutrum.<br/>Ut molestie purus a enim dignissim egestas.<br/>Nunc commodo vulputate posuere.<br/>Integer ornare quis urna volutpat facilisis.</p>
+
+		    	<!-- escape characters -->
+		    	<h3>Escape Characters</h3>
+		    	<p>See list of special escape characters <a href="http://www.degraeve.com/reference/specialcharacters.php">here</a></p>
+		    	<h4>Special Character Reference</h4>
+		    	<h5>Test<h5>
+		    	<p>`~!@#$%^&*()_+-=[]{}\|;:'"<>?/,. </p>
+		    	<ul>
+		    		<li>left single quote = &amp;lsquo; = &lsquo;</li>
+		    		<li>right single quote = &amp;rsquo; = &rsquo;</li>
+		    		<li>left double quote = &amp;ldquo; = &ldquo;</li>
+		    		<li>right double quote = &amp;rdquo; = &rdquo;</li>
+		    		<li>left angle bracket = &amp;lsaquo; = &lsaquo;</li>
+		    		<li>less-than sign = &amp;lt; = &lt;</li>
+		    		<li>right angle bracket = &amp;rsaquo; = &rsaquo;</li>
+		    		<li>greater than = &amp;gt; = &gt;</li>
+		    		<li>Trademark sign = &amp;trade; = &trade;</li>
+		    		<li>Exclamation mark = &amp;#33; = &#33;</li>
+		    		<li>Number sign = &amp;#35; = &#35;</li>
+		    		<li>Dollar sign = &amp;#36; = &#36;</li>
+		    		<li>Percent sign = &amp;#37; = &#37;</li>
+		    		<li>Ampersand = &amp;amp; = &amp;</li>
+		    		<li>Apostrophe = &amp;#39; = &#39;</li>
+		    		<li>Left parenthesis = &amp;#40; = &#40;</li>
+		    		<li>Right parenthesis = &amp;#41; = &#41;</li>
+		    		<li>Asterisk = &amp;#42; = &#42;</li>
+		    		<li>Plus sign = &amp;#43; = &#43;</li>
+		    		<li>Comma = &amp;#44; = &#44;</li>
+		    		<li>Hyphen = &amp;#45; = &#45;</li>
+		    		<li>Period = &amp;#46; = &#46;</li>
+		    		<li>Slash = &amp;#47; = &#47;</li>
+		    		<li>Colon = &amp;#58; = &#58;</li>
+		    		<li>Semicolon = &amp;#59; = &#59;</li>
+		   		</ul>
+		   		<p><a href="#top_menu">Back to top</a></p> <!-- achor to top menu -->
+		    </section> <!-- HTML Basics -->
+
+		    <section id="html_text_emphasis">
+				<h2>HTML Text emphasis</h2>
+				
+				<!-- The <b> tag -->
+		    	<h3>The Bold Tag &lt; b &gt;</h3>
+		    	<p>This is used to point out certain words, though some may prefer the next &lt; strong &gt; tag. </p>
+
+				<!-- The <strong> tag -->
+		    	<h3>The Strong Tag &lt; strong &gt;</h3>
+		    	<p>This tag is also used to point out certain <strong>words</strong> in a text.</p>
+
+		    	<!-- The <i> tag -->
+		    	<h3>The Italics Tag &lt; i &gt;</h3>
+		    	<p>This tag is now used primarily for icons. If you use Bootstrap or other Font icon sets, you should be familiar with this.</p>
+		    	<p>Instead of using the &lt; i &gt; for italics, use the &lt; em &gt; covered in the next section.</p>
+
+		    	<!-- The <em> tag -->
+		    	<h3>The Emphasis Tag &lt; em &gt;</h3>
+		    	<p>This is used to <em>emphasize important parts</em> of a text.</p>
+		    	<p>These tags <em>can be <strong>nested</strong> inside of eachother</em> as well.</p>
+
+		    	<p><a href="#top_menu">Back to top</a></p> <!-- achor to top menu -->
+		    </section> <!-- HTML Text Emphasis -->
+
+		    <section id="html_lists">
+		    	<h2>HTML Lists</h2>
+		    	<!-- The <ul> tag -->
+		    	<h3>The Unordered List Tag &lt; ul &gt;</h3>
+		    	<p>This is only the parent item for a list. Notice directly below this, nothing shoes up, even though you can right click and Inspect Element to see the ul tags are there.</p>
+		    	<ul></ul>
+
+		    	<!-- The <li> tag -->
+		    	<h3>The List Item Tag &lt; li &gt;</h3>
+		    	<p>The li tag is nested inside the ol tag, as seen below.</p>
+		    	<ul>
+		    		<li>Apple</li>
+		    		<li>Blackberry</li>
+		    		<li>Raspberry Pi</li>
+		    	</ul>
+		    	<p>The ul tag and li tags are used commonly for website navigations. See the top of this site for an example.</p>
+
+		    	<!-- The <ol> tag -->
+		    	<h3>The Ordered List Tag &lt; ol &gt;</h3>
+		    	<p>The ol tag is used for numbered lists.</ol>
+		    	<ol>
+		    		<li>First</li>
+		    		<li>Second</li>
+		    		<li>Third	</li>
+		    	</ol>
+
+				<p><a href="#top_menu">Back to top</a></p> <!-- achor to top menu -->
+		    </section> <!-- HTML Lists -->
+
+		    <section id="html_images">
+		    	<h2>HTML Images</h2>
+		    	<p>Images can be linked or "sourced" both externally or locally</p>
+		    	<!-- externally linked image -->
+		    	<h3>External Image</h3>
+		    	<img src="http://4.bp.blogspot.com/-p3aivUwIUwA/TmdCEk0GhXI/AAAAAAAAE80/I77LpAR4KGU/s1600/most-amazing-photos-ever29.jpg" alt="Giant tornado">
+
+		    	<h3>Internal Image</h3>
+		    	<!-- locally inked image -->
+		    	<img src="img/amazing_image.jpg" alt="Truck hauling rockets">
+
+		    	<h3>Clickable Image</h3>
+		    	<p>Nesting &lt; img &gt; tags inside &lt; a &gt; tags makes our images clickable and linked to other pages.</p>
+		    	<a href="http://4.bp.blogspot.com/-p3aivUwIUwA/TmdCEk0GhXI/AAAAAAAAE80/I77LpAR4KGU/s1600/most-amazing-photos-ever29.jpg"><img src="img/amazing_image.jpg" alt="Giant tornado"></a>
+
+		    	<h3>Width and Height Attributes</h3>
+		    	<p>We can use px, em, or % to specify values.</p>
+				<img src="img/amazing_image.jpg" alt="Truck hauling rockets" width="49%">
+				<img src="img/amazing_image.jpg" alt="Truck hauling rockets" width="49%">
+
+				<p><a href="#top_menu">Back to top</a></p> <!-- achor to top menu -->
+
+
+		    </section> <!-- HTML Images -->
+
+		</main>
+
+		<footer>
+			<p>Brought to you by CoderDojoXL Shanghai</p>
+		</footer>
+
+    </body>
+</html> <!-- notice most tags have closing tags -->

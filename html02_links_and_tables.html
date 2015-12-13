@@ -1,0 +1,207 @@
+<!-- HTML part II -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- fits page to screen -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- shows up in Google search results -->
+		<meta name="description" content="CoderDojoXL presents Khan Academy lesson sessions, going through CSS basics.">
+		<!-- page author -->
+		<meta name="author" content="CoderDojoXL Shanghai">
+		<!-- favicon -->
+		<!-- make your own favicon at http://www.favicon.cc/ -->
+		<link rel="icon" href="img/cdxl_favicon.ico">
+
+		<title>HTML Tags</title>
+
+		<!-- CSS link files -->
+		<!-- Normalize resets browser defaults -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!-- template styles -->
+		<link rel="stylesheet" type="text/css" href="css/css_basics_styles.css">
+		<!-- my styles -->
+		<link rel="stylesheet" type="text/css" href="css/my_styles.css">
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    	<script src="js/ie-emulation-modes-warning.js"></script>
+
+    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!--[if lt IE 9]>
+      	<script src="js/html5shiv.min.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+
+	</head>
+	<body>
+		<div id="header">
+			<header id="top">
+				<nav>
+					<ul class="flexbox-container flexbox-justified">
+						<li class="flexbox-item"><a href="index.html">Home</a></li>
+
+						<li class="flexbox-item"><a href="#html_links">HTML Links</a></li>
+						<li class="flexbox-item"><a href="#html_internal_links">Internal Links</a></li>
+						<li class="flexbox-item"><a href="#html_tables">HTML Tables</a></li>
+						<li class="flexbox-item"><a href="#html_comments">HTML Comments</a></li>
+					</ul>
+				</nav>
+			</header>
+		<div> <!-- header div -->
+
+		<!-- main website content -->
+		<h1 style="text-align: center" id="css_basics">HTML Links and Tables</h1>
+
+		<div class="main">
+			<!-- Links -->
+			<section id="html_links" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>HTML Links - &lt; a &gt;</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>Use the &lt; a &gt; tag to make a link.</p>
+					<p>Add the <span class="keyword_attribute">href</span> attribute and set it to the destination URL address.</p>
+					<code>&lt; a href="http://www.google.com"&gt; Google &lt; /a &gt;</code>
+					<p>The above code looks like:</p>
+					<a href="http://www.google.com">Google</a>
+					<p>To make the browser open a new window, use the <span class="keyword_attribute">target</span> keyword <br> and set the value equal to <span class="keyword_value">_blank</span>.</p>
+					<code>&lt; a href="http://www.google.com" target="_blank" &gt; Google &lt; /a &gt; </code>
+					<p>Code output:</p>
+					<a href="http://www.google.com" target="_blank">Google</a>
+					<p> &lt; img &gt; tags can also be linked.</p>
+					
+					<p>Non-linked image</p>
+					<img src="img/dojo.jpg" alt="Coderdojo Logo">
+					
+					<p>Linked Image</p>
+					<a href="http://www.meetup.com/CoderDojoXL-Shanghai/"><img src="img/dojo.jpg" alt="Coderdojo logo"></a>
+				</article>
+			</section>
+
+			<!-- HTML Internal Links -->
+			<section id="html_internal_links" class="flexbox-container">
+				<aside class="flexbox-item">
+					<h1>Internal links</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>Internal &lt; a &gt; tags can reference parts on a webpage or website</p>
+					<p>Instead of using a URL, us a <span class="keyword_attribute">#</span> hash tag to id of the location</p>
+					<p>This means your destination must have an <span class="keyword_attribute">id</span> of the same name.</p>
+					</p>
+					<code>&lt; a  href="#top_of_page"&gt; Go to top &lt; /a &gt;</code>
+					<p>Output:</p>
+					<a href="#top">Go to top</a>
+					<p>If you want to navigate to a parent directory, you can use the ../ to specify move up one level.</p>
+					<code>&lt; a href="../"&gt; Go to Parent Directory &lt; /a &gt;</code>
+					<p><a href="../">Go to Parent Directory</a></p>
+				</article>
+			</section>
+
+			<!-- HTML Tables -->
+			<section class="flexbox-container" id="">
+				<aside class="flexbox-item">
+					<h1>Tables</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>Tables used to be used for website layout, but not anymore, thanks to frameworkds like <a href="http://www.getbootstrap.com">Bootstrap</a>!.</p>
+					<p>Today, use tales only when needed, for displaying tabular data</p>
+					<h3>HTML Table Tags</h3>
+					<ul>
+						<li>&lt; table &gt; 
+							<ul>
+								<li>&lt; thead &gt;
+									<ul>
+										<li>&lt; tr &gt;
+											<ul>
+												<li>&lt; th &gt;</li>
+												<li>&lt; td &gt;</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>&lt; tbody &gt;
+									<ul>
+										<li>&lt; tr &gt;
+											<ul>
+												<li>&lt; td &gt;</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>&lt; tfoot &gt;
+									<ul>
+										<li>&lt; tr &gt;
+											<ul>
+												<li>&lt; td &gt;</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<p>Example below:</p>
+					<table>
+						<caption>Example Table</caption>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Quantity</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Headsets</td>
+								<td>10</td>
+								<td>$99.95</td>
+							</tr>
+							<tr>
+								<td>Microphone</td>
+								<td>100</td>
+								<td>$49.95</td>
+							</tr>
+							<tr>
+								<td>Handheld Camera</td>
+								<td>15</td>
+								<td>$249.95</td>
+							</tr>
+							<tr>
+								<td>Robot Servant</td>
+								<td>1</td>
+								<td>$1419.95</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr colspan="3">
+								<td colspan="3">Total</td>
+							</tr>
+						</tfoot>
+					</table>
+
+				</article>
+			</section>
+			
+			<!-- HTML Comments -->			
+			<section class="flexbox-container" id="html_comments">
+				<aside class="flexbox-item">
+					<h1>Comments</h1>
+				</aside>
+				<article class="flexbox-item">
+					<p>Comments allow the human reader to undersand the code. It is good practice to explain complicated bits of your code to yourself or others.</p>
+					<code>&lt;!-- This is an HTML comment --&gt;</code>
+					<p>Comments are not shown in the browser.</p>
+					<p>Comments are also useful to debug or check your code. Add comments to a block of code for the browser to ignore it.</p>
+				</article>
+			</section>
+
+		</div> <!-- main -->
+
+		<footer>
+			&copy; 2015 Craig O. Curtis
+		</footer>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>
